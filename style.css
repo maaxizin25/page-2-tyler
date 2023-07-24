@@ -1,29 +1,34 @@
+body,
+button:hover {
+  background-color: #000;
+}
 :root {
   --color-button: #10c500;
 }
-
 @font-face {
-  font-family: "good";
+  font-family: good;
   src: url("good\ times\ rg.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
-
-/* max: 1859px */
-
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
 h2 {
-  font-family: "good", sans-serif;
+  font-family: good, sans-serif;
 }
-body {
-  background-color: black;
+.first-container-second > h3,
+button {
+  font-family: "Roboto Condensed", sans-serif;
 }
 .first-section {
   margin-bottom: 15px;
+}
+.verify-icon,
+footer > img {
+  margin: 0 auto;
 }
 .background-img-first {
   position: absolute;
@@ -34,7 +39,6 @@ body {
   height: 500px;
   opacity: 0.7;
 }
-
 .container-info-first {
   width: 100%;
   display: flex;
@@ -42,7 +46,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0 0;
 }
 .three-container-second {
   position: relative;
@@ -58,8 +62,8 @@ body {
 }
 .container-info-first > h2 {
   font-size: 13px;
+  width: 100%;
 }
-
 @media (min-width: 334px) {
   .container-info-first > h2 {
     width: 332px;
@@ -69,34 +73,34 @@ body {
 .logo {
   max-width: 256px;
 }
-
 .second-container-second {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #000;
 }
-.second-container-second > img:nth-child(1) {
+.second-container-second > img:first-child {
   display: flex;
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
   max-width: 350px;
-  animation: moveUpDown 2s ease-in-out infinite;
+  margin-bottom: 10px;
+  animation: 2s ease-in-out infinite moveUpDown;
 }
 .second-container-second > img:nth-child(2) {
   margin-bottom: 20px;
   display: flex;
   box-sizing: border-box;
-  padding: 0px 5px;
+  padding: 0 5px;
   width: 100%;
 }
-
 @media (min-width: 767px) {
   .container-info-first > h2 {
-    font-size: 30px;
     width: 506px !important;
+    text-align: start;
+    font-size: 15px;
   }
   .container-info-first {
     width: 95%;
@@ -107,11 +111,6 @@ body {
   }
   .container-info-first > img {
     max-width: 500px;
-  }
-  .container-info-first > h2 {
-    text-align: start;
-    width: 50%;
-    font-size: 15px;
   }
   form {
     justify-content: flex-start;
@@ -124,7 +123,7 @@ body {
     display: flex;
     flex-wrap: nowrap !important;
   }
-  .second-container-second > img:nth-child(1) {
+  .second-container-second > img:first-child {
     width: 30%;
   }
   .second-container-second > img:nth-child(2) {
@@ -151,7 +150,6 @@ body {
   form > button {
     max-width: 412px;
   }
-
   .first-section {
     height: 500px;
   }
@@ -172,13 +170,8 @@ body {
     margin: 0 auto;
     font-size: 52px;
   }
+  .five-container-info > h3,
   .four-container-second > h3 {
-    font-size: 1vw !important;
-  }
-  .four-container-second > h3 {
-    font-size: 1vw !important;
-  }
-  .five-container-info > h3 {
     font-size: 1vw !important;
   }
   .first-container-second {
@@ -188,7 +181,11 @@ body {
     font-size: 1.6vw !important;
   }
 }
-
+button,
+form > input {
+  width: 80%;
+  max-width: 400px;
+}
 @media (min-width: 1354px) {
   .container-info-first > img {
     width: 600px !important;
@@ -207,7 +204,6 @@ body {
     max-width: 800px !important;
   }
 }
-
 @media (min-width: 1398px) {
   .container-info-first > h2 {
     width: 55%;
@@ -225,46 +221,38 @@ form {
   gap: 18px;
 }
 form > input {
-  width: 80%;
-  max-width: 400px;
   height: 50px;
   border-radius: 8px;
   background-color: rgba(21, 21, 21, 0.561);
-  color: white;
+  color: #fff;
   padding-left: 10px;
-  border: 1px solid rgb(250, 250, 250);
+  border: 1px solid #fafafa;
 }
 input::placeholder {
-  color: rgb(251, 251, 251);
+  color: #fbfbfb;
   font-size: 16px;
   font-family: "Roboto Condensed", sans-serif;
 }
+button,
+h2,
+h3 {
+  color: #fff;
+}
 button {
-  width: 213px;
-  width: 80%;
-  max-width: 400px;
   height: 40px;
   border-radius: 8px;
   background-color: var(--color-button);
-  color: white;
   font-weight: 700;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   cursor: pointer;
 }
 button:hover {
-  background-color: black;
-  box-shadow: 0px 0px 10px #ffffff;
+  box-shadow: 0 0 10px #fff;
 }
 h2 {
-  color: white;
   font-size: 1rem;
   text-align: center;
 }
-h3 {
-  color: white;
-}
-
 .first-container-second {
   background-color: red;
   height: 40px;
@@ -272,33 +260,33 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+.four-container-second,
+.three-container-second,
+footer {
+  display: flex;
+  background-color: #000;
+}
 .first-container-second > h3 {
   font-size: 17px;
   text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
 }
-
 .three-container-second {
-  display: flex;
   width: 100%;
-  background-color: black;
 }
 .three-container-second > img {
   display: flex;
   width: 100%;
 }
 .four-container-second {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(0, 0, 0);
   padding-bottom: 20px;
 }
 .four-container-second > h3 {
   padding: 10px;
   font-size: 10px;
   text-align: center;
-  font-family: "good", sans-serif;
+  font-family: good, sans-serif;
 }
 .five-container-second {
   width: 100%;
@@ -328,45 +316,35 @@ h3 {
   text-align: center;
 }
 .five-container-info > p {
-  border: 1px solid rgb(192, 192, 192);
+  border: 1px solid silver;
   border-radius: 16px;
   text-align: start;
   padding: 20px;
-  color: white;
-  font-family: "Roboto";
+  color: #fff;
+  font-family: Roboto;
   font-size: 12px;
   font-weight: 300;
 }
 .verify-icon {
   width: 100%;
   max-width: 100px;
-  margin: 0 auto;
 }
 footer {
   box-sizing: border-box;
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 20px;
-  background-color: rgb(0, 0, 0);
 }
-footer > img {
-  margin: 0 auto;
-}
-
 .destak-color {
   color: red;
 }
-
 @keyframes moveUpDown {
-  0% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px); /* Altura da animação para cima */
-  }
-  100% {
-    transform: translateY(0);
+    transform: translateY(10px);
   }
 }
